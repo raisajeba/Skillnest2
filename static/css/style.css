@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background-color: #1a1a2e;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.navbar .logo {
+    color: #e94560;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+}
+
+.nav-links form button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-links form button:hover {
+    color: #e94560;
+}
+
+/* ── Container ── */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ── Headings ── */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #1a1a2e;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 24px 0 12px;
+    color: #333;
+}
+
+/* ── Card ── */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-left: 4px solid #e94560;
+}
+
+.card p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-block;
+    background-color: #e94560;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c73652;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: opacity 0.2s;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+/* ── Forms ── */
+form p, form label {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    background: #fafafa;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #c73652;
+}
+
+/* ── Radio (star rating) ── */
+ul.errorlist {
+    color: #e94560;
+    list-style: none;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+}
+
+/* ── HR ── */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 24px 0;
+}
+
+/* ── Home page ── */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+small {
+    color: #999;
+    font-size: 0.8rem;
+}

@@ -87,6 +87,14 @@
         </button>
 
     </form>
+    {% elif req.status == "accepted" %}
+      {% if req.rating %}
+        <p>⭐ Rated: {{ req.rating.score }}/5</p>
+      {% else %}
+        <a class="action-btn" href="{% url 'submit_rating' req.id %}">
+          ⭐ Rate
+        </a>
+      {% endif %}
     {% endif %}
 
   </div>
