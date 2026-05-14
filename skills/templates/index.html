@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>All Skills</h2>
+
+
+<form method="GET">
+    <input type="text" name="search" placeholder="Search skill">
+    <button>Search</button>
+
+    <select name="category">
+        <option value="">All</option>
+        {% for cat in categories %}
+            <option value="{{ cat.id }}">{{ cat.name }}</option>
+        {% endfor %}
+    </select>
+
+    <button>Filter</button>
+</form>
+
+<hr>
+
+{% for skill in skills %}
+    <div class="card">
+
+        <h3>{{ skill.name }}</h3>
+        <p>{{ skill.description }}</p>
+        <small>By {{ skill.user.username }}</small>
+
+        <br>
+        <small>
+            Points: {{skill.user.profile.points }}
+        </small>
+
+        <br><br>
+
+        <a href="{% url 'skill_detail' skill.id %}">
+            View Details
+        </a>
+
+    </div>
+{% empty %}
+    <p>No skills found</p>
+{% endfor %}
+
+{% endblock %}
