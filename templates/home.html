@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<div class="container">
+    <div class="hero">
 
-<div class="hero">
+        <div class="hero-text">
+            <h1>
+                Learn. <span>Teach.</span><br>
+                Exchange.
+            </h1>
+            <p>
+                Welcome to SkillNest Platform
+            </h1>
+            <a href="{% url 'index' %}" class="btn">
+                Browse Skills
+            </a>
+        </div>
 
-    <h1>
-        Learn. Teach. Exchange.
-    </h1>
+        <div class="hero-img-container">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="SkillNest">
+        </div>
 
-    <p>
-        Welcome to SkillNest Platform
-    </p>
-
-    <a href="{% url 'index' %}"
-       class="btn">
-
-        Browse Skills
-
-    </a>
-
+    </div>
 </div>
-
 {% endblock %}
