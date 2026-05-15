@@ -1,21 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<h2>Edit Profile</h2>
+<div class="container mt-5 d-flex justify-content-center">
 
-<form method="POST" enctype="multipart/form-data">
+    <div class="card shadow-lg p-4" style="width: 500px; border-radius: 15px;">
 
-    {% csrf_token %}
+        <h3 class="text-center mb-4">Edit Profile</h3>
 
-    {{ form.as_p }}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
 
-    <button type="submit">
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
 
-        Save
+            <button type="submit" class="btn btn-primary w-100">
+                Save Changes
+            </button>
+        </form>
 
-    </button>
+    </div>
 
-</form>
+</div>
 
 {% endblock %}
