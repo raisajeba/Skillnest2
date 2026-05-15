@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>⭐ My Ratings</h2>
+
+{% for rating in ratings %}
+  <div class="card">
+    <p><b>{{ rating.rater.username }}</b> rated you <b>{{ rating.score }}/5 ★</b></p>
+    <p>Skill: {{ rating.exchange.skill.name }}</p>
+    {% if rating.comment %}
+      <p>Comment: {{ rating.comment }}</p>
+    {% endif %}
+    <small>{{ rating.created_at|date:"d M Y" }}</small>
+  </div>
+{% empty %}
+  <p>No ratings yet.</p>
+{% endfor %}
+
+{% endblock %}

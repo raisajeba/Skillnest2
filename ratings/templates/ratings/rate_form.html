@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>⭐ Rate Your Exchange</h2>
+
+<div class="card">
+  <p>You exchanged <b>{{ exchange.skill.name }}</b> with <b>{{ exchange.receiver.username }}</b></p>
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <p><b>Score:</b></p>
+    {{ form.score }}
+
+    <p><b>Comment:</b></p>
+    {{ form.comment }}
+
+    <br>
+    <button type="submit" class="btn">Submit Rating</button>
+    <a href="{% url 'exchange_home' %}" class="btn">Cancel</a>
+  </form>
+</div>
+
+{% endblock %}

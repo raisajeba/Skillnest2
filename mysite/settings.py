@@ -96,6 +96,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 LOGIN_REDIRECT_URL = 'profile'
 LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
 
 LANGUAGE_CODE = 'en-us'
 
