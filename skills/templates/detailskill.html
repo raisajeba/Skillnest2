@@ -1,0 +1,27 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ skill.name }}</h2>
+
+<p>{{ skill.description }}</p>
+
+<p><b>Category:</b> {{ skill.category }}</p>
+<p><b>Level:</b> {{ skill.skill_level }}</p>
+<p><b>Owner:</b> {{ skill.user.username }}</p>
+
+<hr>
+
+<h4>Images</h4>
+
+{% if skill.image %}
+    <img src="{{ skill.image.url }}" width="200">
+{% else %}
+    <p>No image</p>
+{% endif %}
+
+<a href="{% url 'send_request' skill.id %}" class ="btn">
+    Request Exchange
+</a>
+
+{% endblock %}
